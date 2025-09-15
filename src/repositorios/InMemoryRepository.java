@@ -10,7 +10,7 @@ public class InMemoryRepository<T> {
 
     public T save(T entity) {
         long id = idGenerator.incrementAndGet();
-        // Suponiendo que las entidades tienen un método setId
+        // Suponiendo que las entidades tienen un metodo setId
         try {
             String clase;
             entity.getClass().getMethod("setId", Long.class).invoke(entity, id);
